@@ -1,5 +1,6 @@
-from .surface_generator import Surface, SurfaceGenerator
-from .text.text_renderer import Alignment
+from pygame import Surface
+from surface_generator import SurfaceGenerator
+from text.text_renderer import Alignment
 from typing import List
 
 

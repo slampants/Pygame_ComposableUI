@@ -1,7 +1,8 @@
-from .text.alignment import Alignment
 from datetime import datetime
+from pygame import Surface
+from surface_generator import SurfaceGenerator
+from text.alignment import Alignment
 from typing import List
-from Visuals.surface_generator import Surface, SurfaceGenerator
 
 
 class TimeContent:

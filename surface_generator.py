@@ -1,9 +1,9 @@
 from constants import k_SCREEN_WIDTH, k_SCREEN_HEIGHT
-from .images.image_renderer import ImageRenderer
-from .text.alignment import Alignment
-from .text.text_renderer import TextRenderer
 from functools import reduce
+from images.image_renderer import ImageRenderer
 from pygame import Surface
+from text.alignment import Alignment
+from text.text_renderer import TextRenderer
 from typing import Optional
 
 # Set content width to screen height if screen is rotated 90º

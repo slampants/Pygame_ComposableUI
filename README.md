@@ -1,7 +1,7 @@
-# Pygame_ComposableUI
+# Pygame ComposableUI
 A module for making a composable UI using Pygame
 
-I was making my own [Smart mirror](http://example.com) and needed to be able to easily create different
+I was making my own [Smart mirror](https://www.samfriedman.tech/smart-mirror) and needed to be able to easily create different
 parts of the screen without hard-coding them. So I created a submodule that did everything I needed it to do in a way
 that utilizes a "stack," where you just push each individually created UI element onto a stack, then render the stack 
 all in one go. It all had to work on `pygame` because I was using a Raspberry pi to run the whole thing.

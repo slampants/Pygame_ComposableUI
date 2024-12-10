@@ -1,7 +1,6 @@
-from typing import List, Optional
+from constants import k_BG_COLOR
 from pygame import Rect, Surface
-
-k_BG_COLOR = (0, 0, 0)
+from typing import List, Optional
 
 
 class Stack:

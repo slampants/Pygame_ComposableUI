@@ -1,4 +1,4 @@
+k_BG_COLOR = (0, 0, 0)  # Black background
 k_SCREEN_WIDTH = 1280
 k_SCREEN_HEIGHT = 390
-
 k_MAIN_SIZE_CHARACTER_LIMIT = 20

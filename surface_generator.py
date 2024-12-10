@@ -1,4 +1,4 @@
-from .constants import k_SCREEN_HEIGHT
+from constants import k_SCREEN_WIDTH, k_SCREEN_HEIGHT
 from .images.image_renderer import ImageRenderer
 from .text.alignment import Alignment
 from .text.text_renderer import TextRenderer
@@ -6,14 +6,14 @@ from functools import reduce
 from pygame import Surface
 from typing import Optional
 
-# Setting to screen height under assumption that screen is rotated. Change this if necessary
-k_CONTENT_WIDTH = k_SCREEN_HEIGHT
-
+# Set content width to screen height if screen is rotated 90º
+# k_CONTENT_WIDTH = k_SCREEN_HEIGHT
+CONTENT_WIDTH = k_SCREEN_WIDTH
 
 class SurfaceGenerator:
     """Static class for generating surfaces for text and images"""
     @staticmethod
-    def text_surface(text: str, max_width: int = k_CONTENT_WIDTH, alignment: Alignment = Alignment.LEFT,
+    def text_surface(text: str, max_width: int = CONTENT_WIDTH, alignment: Alignment = Alignment.LEFT,
                      is_big: bool = False) -> Surface:
         """Returns a text surface"""
         if is_big:
@@ -22,16 +22,16 @@ class SurfaceGenerator:
             return TextRenderer().text_surface(text, alignment=alignment)
 
     @staticmethod
-    def image_surface(filepath: str, max_width: int = k_CONTENT_WIDTH) -> Surface:
+    def image_surface(filepath: str, max_width: int = CONTENT_WIDTH) -> Surface:
         """Returns an image surface"""
         return ImageRenderer.image_surface(filepath, max_width)
 
     @staticmethod
     def vertical_spacer(height: int = 10) -> Surface:
-        return Surface((k_CONTENT_WIDTH, height))
+        return Surface((CONTENT_WIDTH, height))
 
     @staticmethod
-    def merge_surfaces(surfaces: [Surface], width: int = k_CONTENT_WIDTH, height: Optional[int] = None) -> Surface:
+    def merge_surfaces(surfaces: [Surface], width: int = CONTENT_WIDTH, height: Optional[int] = None) -> Surface:
         """
         Takes a list of surfaces and merges them into a single surface, justified to spread across a given width.
         This will clip horizontally if there is not room for all surfaces to fit end-to-end

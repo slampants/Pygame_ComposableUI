@@ -9,7 +9,7 @@ class ErrorContent:
     @staticmethod
     def error_image() -> Surface:
         """Returns the error image"""
-        return SurfaceGenerator.image_surface("Visuals/images/weather_icons/error.png")
+        return SurfaceGenerator.image_surface("images/icons/error.png")
 
     @staticmethod
     def error_message() -> Surface:
